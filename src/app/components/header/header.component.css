@@ -17,3 +17,7 @@
 .header .title-group a {
   padding: 0px 10px;
 }
+
+.title-group a:visited {
+  color: #fff;
+}
