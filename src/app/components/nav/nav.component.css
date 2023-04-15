@@ -22,3 +22,8 @@
 .nav-list a span {
   color: #fff;
 }
+
+.content {
+  padding: 1rem;
+  background-color: #fff;
+}
