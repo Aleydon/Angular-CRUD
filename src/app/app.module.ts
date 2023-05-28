@@ -8,6 +8,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { HeaderComponent } from './components/header/header.component';
 import { AppComponent } from './app.component';
@@ -37,6 +38,7 @@ import { ProductCreateComponent } from './components/product/product-create/prod
     MatSidenavModule,
     MatCardModule,
     MatButtonModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
