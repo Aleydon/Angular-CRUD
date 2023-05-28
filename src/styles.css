@@ -12,3 +12,7 @@ body {
 .red {
   color: #f00;
 }
+
+button {
+  cursor: pointer;
+}
