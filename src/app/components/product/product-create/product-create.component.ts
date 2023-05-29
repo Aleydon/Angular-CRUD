@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductService } from '../product.service';
+import { Product } from '../product.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-create',
@@ -7,13 +9,21 @@ import { ProductService } from '../product.service';
   styleUrls: ['./product-create.component.css'],
 })
 export class ProductCreateComponent {
-  constructor(private matSnackBar: ProductService) {}
+  product: Product = {
+    name: '',
+    price: 0.0,
+  };
+
+  constructor(private productService: ProductService, private router: Router) {}
 
   createProduct(): void {
-    this.matSnackBar.showMessage('Product Created');
+    this.productService.create(this.product).subscribe(() => {
+      this.productService.showMessage('Product Created');
+      this.router.navigate(['/products']);
+    });
   }
 
   cancelProductCreate(): void {
-    this.matSnackBar.showMessage('Cancel...');
+    this.router.navigate(['/products']);
   }
 }
