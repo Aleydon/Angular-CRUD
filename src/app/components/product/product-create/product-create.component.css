@@ -1,8 +1,12 @@
-button {
-  margin-left: 10px;
-}
-
 form {
   display: flex;
   flex-direction: column;
+}
+
+button {
+  margin-top: 20px;
+}
+
+.cancelBtn {
+  margin-left: 10px;
 }
