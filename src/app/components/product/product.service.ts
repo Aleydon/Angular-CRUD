@@ -21,7 +21,12 @@ export class ProductService {
       verticalPosition: 'top',
     });
   }
+
   create(product: Product): Observable<Product> {
     return this.http.post<Product>(this.baseUrl, product);
+  }
+
+  getProductList(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.baseUrl);
   }
 }
