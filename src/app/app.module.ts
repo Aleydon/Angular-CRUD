@@ -23,6 +23,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProductsCrudComponent } from './pages/products-crud/products-crud.component';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import { GetProductsComponent } from './components/get-products/get-products.component';
+import { TableComponent } from './components/table/table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -34,6 +38,7 @@ import { GetProductsComponent } from './components/get-products/get-products.com
     ProductsCrudComponent,
     ProductCreateComponent,
     GetProductsComponent,
+    TableComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +54,9 @@ import { GetProductsComponent } from './components/get-products/get-products.com
     MatInputModule,
     MatFormFieldModule,
     FormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
